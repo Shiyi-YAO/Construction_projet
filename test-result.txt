@@ -1,0 +1,145 @@
+python3 lineaire.py --class-weight balanced --C 0.05
+Traitement des embeddings...
+Dimension fréquente de Embedding_reprise : 300
+Dimension fréquente de Embedding_antecedent : 300
+Shape de emb_reprise : (299, 300)
+Shape de emb_ante : (299, 300)
+--- Conversion terminée ---
+Shape de X : (299, 661)
+Nombre d'exemples dans y : 299
+Paramètres utilisés :
+test_size = 0.2
+n_splits = 5
+max_iter = 50000
+C = 0.05
+class_weight = balanced
+
+Résultats de la validation croisée sur le train :
+Accuracy moyen : 0.6196808510638298
+Precision macro moyenne : 0.6212553133141367
+Recall macro moyen : 0.6103030303030302
+F1 macro moyen : 0.611534932555278
+
+Scores par fold :
+Accuracy : [0.64583333 0.64583333 0.5625     0.52083333 0.72340426]
+Precision macro : [0.64194738 0.63232323 0.56980057 0.51515152 0.74705387]
+Recall macro : [0.65079365 0.63174603 0.53888889 0.50714286 0.72294372]
+F1 macro : [0.64388889 0.62508006 0.54778791 0.50960467 0.73131313]
+
+Résultats finaux sur le test :
+Accuracy : 0.7
+
+Classification report :
+                precision    recall  f1-score   support
+
+  E antecedent       0.77      0.74      0.75        27
+E grammaticale       0.56      0.60      0.58        15
+     E reprise       0.72      0.72      0.72        18
+
+      accuracy                           0.70        60
+     macro avg       0.68      0.69      0.69        60
+  weighted avg       0.70      0.70      0.70        60
+
+
+Confusion matrice :
+[[20  5  2]
+ [ 3  9  3]
+ [ 3  2 13]]
+
+(intro_tal) luh@lu-21hw:~/Desktop/S2-composition_de_donnees/projet/Construction_projet$ python3 lineaire.py --class-weight balanced --C 0.2
+Traitement des embeddings...
+Dimension fréquente de Embedding_reprise : 300
+Dimension fréquente de Embedding_antecedent : 300
+Shape de emb_reprise : (299, 300)
+Shape de emb_ante : (299, 300)
+--- Conversion terminée ---
+Shape de X : (299, 661)
+Nombre d'exemples dans y : 299
+Paramètres utilisés :
+test_size = 0.2
+n_splits = 5
+max_iter = 50000
+C = 0.2
+class_weight = balanced
+
+Résultats de la validation croisée sur le train :
+Accuracy moyen : 0.6197695035460993
+Precision macro moyenne : 0.6224143524556321
+Recall macro moyen : 0.6160317460317459
+F1 macro moyen : 0.6149083537660773
+
+Scores par fold :
+Accuracy : [0.64583333 0.66666667 0.54166667 0.5        0.74468085]
+Precision macro : [0.64194738 0.65396825 0.55246914 0.4968254  0.7668616 ]
+Recall macro : [0.65079365 0.65396825 0.51666667 0.4968254  0.76190476]
+F1 macro : [0.64388889 0.64902998 0.52601411 0.4968254  0.75878339]
+
+Résultats finaux sur le test :
+Accuracy : 0.7166666666666667
+
+Classification report :
+                precision    recall  f1-score   support
+
+  E antecedent       0.80      0.74      0.77        27
+E grammaticale       0.60      0.60      0.60        15
+     E reprise       0.70      0.78      0.74        18
+
+      accuracy                           0.72        60
+     macro avg       0.70      0.71      0.70        60
+  weighted avg       0.72      0.72      0.72        60
+
+
+Confusion matrice :
+[[20  5  2]
+ [ 2  9  4]
+ [ 3  1 14]]
+
+
+(intro_tal) luh@lu-21hw:~/Desktop/S2-composition_de_donnees/projet/Construction_projet$ python3 lineaire.py --C 0.2
+Traitement des embeddings...
+Dimension fréquente de Embedding_reprise : 300
+Dimension fréquente de Embedding_antecedent : 300
+Shape de emb_reprise : (299, 300)
+Shape de emb_ante : (299, 300)
+--- Conversion terminée ---
+Shape de X : (299, 661)
+Nombre d'exemples dans y : 299
+Paramètres utilisés :
+test_size = 0.2
+n_splits = 5
+max_iter = 50000
+C = 0.2
+class_weight = None
+
+Résultats de la validation croisée sur le train :
+Accuracy moyen : 0.6197695035460994
+Precision macro moyenne : 0.6217505717918514
+Recall macro moyen : 0.6147619047619047
+F1 macro moyen : 0.6134798334709438
+
+Scores par fold :
+Accuracy : [0.64583333 0.64583333 0.54166667 0.52083333 0.74468085]
+Precision macro : [0.64194738 0.63232323 0.55246914 0.51515152 0.7668616 ]
+Recall macro : [0.65079365 0.63174603 0.51666667 0.51269841 0.76190476]
+F1 macro : [0.64388889 0.62508006 0.52601411 0.51363272 0.75878339]
+
+Résultats finaux sur le test :
+Accuracy : 0.7166666666666667
+
+Classification report :
+                precision    recall  f1-score   support
+
+  E antecedent       0.80      0.74      0.77        27
+E grammaticale       0.60      0.60      0.60        15
+     E reprise       0.70      0.78      0.74        18
+
+      accuracy                           0.72        60
+     macro avg       0.70      0.71      0.70        60
+  weighted avg       0.72      0.72      0.72        60
+
+
+Confusion matrice :
+[[20  5  2]
+ [ 2  9  4]
+ [ 3  1 14]]
+(intro_tal) luh@lu-21hw:~/Desktop/S2-composition_de_donnees/projet/Construction_projet$
