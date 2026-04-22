@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 # Lire le corpus
-df = pd.read_csv('dataset_erreurs_reprises.csv')
+df = pd.read_csv('docs/dataset_erreurs_reprises.csv')
 
 # Supprimer les ligne avec la valeur vide dans la colonne "TypeErreur1"
 df = df.dropna(subset=['TypeErreur1']).copy()
