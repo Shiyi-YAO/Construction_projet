@@ -1,0 +1,252 @@
+# 1. Commande : python3 lineaire_RBF.py
+
+
+Traitement des embeddings...
+Dimension fréquente de Embedding_reprise : 300
+Dimension fréquente de Embedding_antecedent : 300
+Shape de emb_reprise : (299, 300)
+Shape de emb_ante : (299, 300)
+--- Conversion terminée ---
+Shape de X : (299, 661)
+Nombre d'exemples dans y : 299
+Paramètres utilisés :
+test_size = 0.2
+n_splits = 5
+C = 1.0
+class_weight = None
+/Users/zhaoyinbo/Construction_projet/plurital/lib/python3.11/site-packages/sklearn/svm/_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+/Users/zhaoyinbo/Construction_projet/plurital/lib/python3.11/site-packages/sklearn/svm/_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+
+================ MODELE LINEAIRE ================
+Accuracy moyenne : 0.6281028368794327
+F1 macro moyen : 0.6221025425010874
+
+================ MODELE RBF ================
+Accuracy moyenne : 0.5483156028368794
+F1 macro moyen : 0.4931042952983432
+
+================ TEST LINEAIRE ================
+Accuracy : 0.6333333333333333
+                precision    recall  f1-score   support
+
+  E antecedent       0.71      0.63      0.67        27
+E grammaticale       0.53      0.53      0.53        15
+     E reprise       0.62      0.72      0.67        18
+
+      accuracy                           0.63        60
+     macro avg       0.62      0.63      0.62        60
+  weighted avg       0.64      0.63      0.63        60
+
+[[17  5  5]
+ [ 4  8  3]
+ [ 3  2 13]]
+
+================ TEST RBF ================
+Accuracy : 0.5666666666666667
+                precision    recall  f1-score   support
+
+  E antecedent       0.57      0.74      0.65        27
+E grammaticale       0.56      0.33      0.42        15
+     E reprise       0.56      0.50      0.53        18
+
+      accuracy                           0.57        60
+     macro avg       0.56      0.52      0.53        60
+  weighted avg       0.56      0.57      0.55        60
+
+[[20  4  3]
+ [ 6  5  4]
+ [ 9  0  9]]
+
+
+
+
+# 改变测试集比例（比如想要 30% 做测试
+# 2. Commande : python3 lineaire_RBF.py --test-size 0.3
+
+
+
+Traitement des embeddings...
+Dimension fréquente de Embedding_reprise : 300
+Dimension fréquente de Embedding_antecedent : 300
+Shape de emb_reprise : (299, 300)
+Shape de emb_ante : (299, 300)
+--- Conversion terminée ---
+Shape de X : (299, 661)
+Nombre d'exemples dans y : 299
+Paramètres utilisés :
+test_size = 0.3
+n_splits = 5
+C = 1.0
+class_weight = None
+
+================ MODELE LINEAIRE ================
+Accuracy moyenne : 0.6411149825783973
+F1 macro moyen : 0.6244847197936443
+
+================ MODELE RBF ================
+Accuracy moyenne : 0.5498257839721254
+F1 macro moyen : 0.48724408489326476
+
+================ TEST LINEAIRE ================
+Accuracy : 0.6111111111111112
+                precision    recall  f1-score   support
+
+  E antecedent       0.68      0.62      0.65        40
+E grammaticale       0.52      0.50      0.51        22
+     E reprise       0.59      0.68      0.63        28
+
+      accuracy                           0.61        90
+     macro avg       0.60      0.60      0.60        90
+  weighted avg       0.61      0.61      0.61        90
+
+[[25  7  8]
+ [ 6 11  5]
+ [ 6  3 19]]
+
+================ TEST RBF ================
+Accuracy : 0.5333333333333333
+                precision    recall  f1-score   support
+
+  E antecedent       0.55      0.75      0.63        40
+E grammaticale       0.44      0.18      0.26        22
+     E reprise       0.54      0.50      0.52        28
+
+      accuracy                           0.53        90
+     macro avg       0.51      0.48      0.47        90
+  weighted avg       0.52      0.53      0.51        90
+
+[[30  5  5]
+ [11  4  7]
+ [14  0 14]]
+(plurital) (base) zhaoyinbo@Einstein Construction_projet %
+
+
+
+
+
+# 改变正则化强度（比如设置 C 为 10)
+# 3. Commande : python3 lineaire_RBF.py --C 10.0
+
+
+Traitement des embeddings...
+Dimension fréquente de Embedding_reprise : 300
+Dimension fréquente de Embedding_antecedent : 300
+Shape de emb_reprise : (299, 300)
+Shape de emb_ante : (299, 300)
+--- Conversion terminée ---
+Shape de X : (299, 661)
+Nombre d'exemples dans y : 299
+Paramètres utilisés :
+test_size = 0.2
+n_splits = 5
+C = 10.0
+class_weight = None
+/Users/zhaoyinbo/Construction_projet/plurital/lib/python3.11/site-packages/sklearn/svm/_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+
+================ MODELE LINEAIRE ================
+Accuracy moyenne : 0.6321808510638298
+F1 macro moyen : 0.6266355128974788
+
+================ MODELE RBF ================
+Accuracy moyenne : 0.5524822695035462
+F1 macro moyen : 0.5218950928391182
+
+================ TEST LINEAIRE ================
+Accuracy : 0.6166666666666667
+                precision    recall  f1-score   support
+
+  E antecedent       0.70      0.59      0.64        27
+E grammaticale       0.50      0.53      0.52        15
+     E reprise       0.62      0.72      0.67        18
+
+      accuracy                           0.62        60
+     macro avg       0.60      0.62      0.61        60
+  weighted avg       0.62      0.62      0.62        60
+
+[[16  6  5]
+ [ 4  8  3]
+ [ 3  2 13]]
+
+================ TEST RBF ================
+Accuracy : 0.5833333333333334
+                precision    recall  f1-score   support
+
+  E antecedent       0.62      0.74      0.68        27
+E grammaticale       0.42      0.33      0.37        15
+     E reprise       0.62      0.56      0.59        18
+
+      accuracy                           0.58        60
+     macro avg       0.56      0.54      0.55        60
+  weighted avg       0.57      0.58      0.57        60
+
+[[20  6  1]
+ [ 5  5  5]
+ [ 7  1 10]]
+
+
+
+
+
+
+# 处理类别不平衡（如果你发现样本分布很不均匀）
+ # 4 python3 lineaire_RBF.py --class-weight balanced
+
+
+
+Traitement des embeddings...
+Dimension fréquente de Embedding_reprise : 300
+Dimension fréquente de Embedding_antecedent : 300
+Shape de emb_reprise : (299, 300)
+Shape de emb_ante : (299, 300)
+--- Conversion terminée ---
+Shape de X : (299, 661)
+Nombre d'exemples dans y : 299
+Paramètres utilisés :
+test_size = 0.2
+n_splits = 5
+C = 1.0
+class_weight = balanced
+
+================ MODELE LINEAIRE ================
+Accuracy moyenne : 0.6322695035460993
+F1 macro moyen : 0.6261923465908915
+
+================ MODELE RBF ================
+Accuracy moyenne : 0.49840425531914895
+F1 macro moyen : 0.4916658692185007
+
+================ TEST LINEAIRE ================
+Accuracy : 0.65
+                precision    recall  f1-score   support
+
+  E antecedent       0.75      0.67      0.71        27
+E grammaticale       0.53      0.53      0.53        15
+     E reprise       0.62      0.72      0.67        18
+
+      accuracy                           0.65        60
+     macro avg       0.63      0.64      0.64        60
+  weighted avg       0.66      0.65      0.65        60
+
+[[18  5  4]
+ [ 3  8  4]
+ [ 3  2 13]]
+
+================ TEST RBF ================
+Accuracy : 0.43333333333333335
+                precision    recall  f1-score   support
+
+  E antecedent       0.57      0.15      0.24        27
+E grammaticale       0.40      0.53      0.46        15
+     E reprise       0.42      0.78      0.55        18
+
+      accuracy                           0.43        60
+     macro avg       0.47      0.49      0.41        60
+  weighted avg       0.48      0.43      0.38        60
+
+[[ 4 11 12]
+ [ 0  8  7]
+ [ 3  1 14]]
+
