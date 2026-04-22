@@ -1,0 +1,111 @@
+>> python svc_svm.py
+
+Traitement des embeddings...
+Dimension fréquente de Embedding_reprise : 300
+Dimension fréquente de Embedding_antecedent : 300
+Shape de emb_reprise : (299, 300)
+Shape de emb_ante : (299, 300)
+--- Conversion terminée ---
+Shape de X : (299, 661)
+Nombre d'exemples dans y : 299
+Paramètres utilisés :
+test_size = 0.2
+max_iter = 50000
+class_weight = None
+
+Meilleurs paramètres trouvés (sur TRAIN) :
+{'C': 0.1}
+
+Résultats sur DEV :
+Accuracy : 0.65
+
+Classification report (DEV) :
+                precision    recall  f1-score   support
+
+  E antecedent       0.67      0.67      0.67        27
+E grammaticale       0.69      0.60      0.64        15
+     E reprise       0.60      0.67      0.63        18
+
+      accuracy                           0.65        60
+     macro avg       0.65      0.64      0.65        60
+  weighted avg       0.65      0.65      0.65        60
+
+
+==============================
+Résultats finaux sur TEST :
+==============================
+Accuracy : 0.7
+
+Classification report (TEST) :
+                precision    recall  f1-score   support
+
+  E antecedent       0.77      0.74      0.75        27
+E grammaticale       0.56      0.60      0.58        15
+     E reprise       0.72      0.72      0.72        18
+
+      accuracy                           0.70        60
+     macro avg       0.68      0.69      0.69        60
+  weighted avg       0.70      0.70      0.70        60
+
+
+Confusion matrix :
+[[20  5  2]
+ [ 3  9  3]
+ [ 3  2 13]]
+
+## ---------------------------------------------------------------- ##
+
+>> python svc_svm.py --class-weight balanced
+
+Traitement des embeddings...
+Dimension fréquente de Embedding_reprise : 300
+Dimension fréquente de Embedding_antecedent : 300
+Shape de emb_reprise : (299, 300)
+Shape de emb_ante : (299, 300)
+--- Conversion terminée ---
+Shape de X : (299, 661)
+Nombre d'exemples dans y : 299
+Paramètres utilisés :
+test_size = 0.2
+max_iter = 50000
+class_weight = balanced
+
+Meilleurs paramètres trouvés (sur TRAIN) :
+{'C': 10}
+
+Résultats sur DEV :
+Accuracy : 0.6666666666666666
+
+Classification report (DEV) :
+                precision    recall  f1-score   support
+
+  E antecedent       0.69      0.67      0.68        27
+E grammaticale       0.67      0.67      0.67        15
+     E reprise       0.63      0.67      0.65        18
+
+      accuracy                           0.67        60
+     macro avg       0.66      0.67      0.66        60
+  weighted avg       0.67      0.67      0.67        60
+
+
+==============================
+Résultats finaux sur TEST :
+==============================
+Accuracy : 0.6166666666666667
+
+Classification report (TEST) :
+                precision    recall  f1-score   support
+
+  E antecedent       0.70      0.59      0.64        27
+E grammaticale       0.50      0.53      0.52        15
+     E reprise       0.62      0.72      0.67        18
+
+      accuracy                           0.62        60
+     macro avg       0.60      0.62      0.61        60
+  weighted avg       0.62      0.62      0.62        60
+
+
+Confusion matrix :
+[[16  6  5]
+ [ 4  8  3]
+ [ 3  2 13]]
