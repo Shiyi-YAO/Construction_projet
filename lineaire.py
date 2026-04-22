@@ -96,7 +96,7 @@ def main():
     print(classification_report(y_test, y_pred))
 
     print("\nConfusion matrice :")
-    print(confusion_matrice(y_test, y_pred))
+    print(confusion_matrix(y_test, y_pred))
 
 if __name__ == "__main__":
     main()
